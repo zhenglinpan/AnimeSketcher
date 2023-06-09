@@ -36,25 +36,37 @@ class Animeset(Dataset):
                 a uint8 image data, all values are divided by 255(max)
             2. Changing channel order from H W C(Pillow/opencv) to C H W 
     """
-    def __init__(self, dataset_dir, transforms_=None, ):
+    def __init__(self, dataset_dir, transforms_=None, mode='train'):
         self.transforms_ = transforms_
         self.transform = transforms.Compose(transforms_)
+        self.mode = mode
         
-        self.filelistA = glob.glob(dataset_dir + '/sketch/*.jpg') 
-        self.filelistB = glob.glob(dataset_dir + '/frame/*.jpg') 
-        
+        if self.mode == 'train':
+            self.filelistA = glob.glob(dataset_dir + '/sketch/*.jpg') 
+            self.filelistB = glob.glob(dataset_dir + '/frame/*.jpg') 
+        else:
+            self.filelistA = glob.glob(dataset_dir + '/scene1/*.jpg') 
+            self.filelistA.sort(key=lambda x: int(x.split("_")[1].strip('.jpg')))
+            
     def __len__(self):
-        return max(len(self.filelistA), len(self.filelistB))
+        if self.mode == 'train':
+            return max(len(self.filelistA), len(self.filelistB))
+        else:
+            return len(self.filelistA)
     
     def __getitem__(self, index):
         img_A = Image.open(self.filelistA[index % len(self.filelistA)])
-        img_B = Image.open(self.filelistB[random.randint(0, len(self.filelistB) - 1)])
         if self.transforms_:
-            """
-            Only takes in PIL(Image.open) or Tensor(detransform)
-            If data are read with numpy, convert to PIL first + [transform.ToPILImage()]
-            """
             img_A = self.transform(img_A)
-            img_B = self.transform(img_B)
-        return {'A':img_A, 'B':img_B}
+        if self.mode == 'train':
+            img_B = Image.open(self.filelistB[random.randint(0, len(self.filelistB) - 1)])
+            if self.transforms_:
+                """
+                Only takes in PIL(Image.open) or Tensor(detransform)
+                If data are read with numpy, convert to PIL first + [transform.ToPILImage()]
+                """
+                img_B = self.transform(img_B)
+            return {'A':img_A, 'B':img_B}
+        else:
+            return {'B':img_A}
         
