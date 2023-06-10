@@ -11,7 +11,7 @@ I would like to emphasize my utmost respect for the diligent efforts of animatio
 </p>
 
 <p align="center">
-  <img src="https://github.com/ZhenglinPan/AnimeSketcher/blob/master/others/img03.jpg" width="" alt="accessibility text">
+  <img src="https://github.com/ZhenglinPan/AnimeSketcher/blob/master/others/img03.gif" width="" alt="accessibility text">
 </p>
 
 <p align="center">
