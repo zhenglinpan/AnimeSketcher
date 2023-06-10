@@ -1,8 +1,3 @@
-# _*_ coding: utf-8 _*_
-# @Time    :   2021/09/03 14:06:47
-# @FileName:   ESRGAN.py
-# @Author  :   Boyang
-# @Descript:   ESRGAN model
 import torch
 import torch.nn as nn
 import functools

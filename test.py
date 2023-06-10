@@ -25,8 +25,8 @@ parser.add_argument('--cuda', type=bool, default=True, help='use GPU computation
 parser.add_argument('--n_cpu', type=int, default=8, help='number of cpu threads to use during batch generation')
 parser.add_argument('--generator_A2B', type=str, default='./models/20_RRDB_netG_A2B.pth', help='A2B generator checkpoint file')
 parser.add_argument('--generator_B2A', type=str, default='./models/20_RRDB_netG_B2A.pth', help='B2A generator checkpoint file')
-parser.add_argument('--mode', type=str, default='train', help='B2A generator checkpoint file')
-parser.add_argument('--patch_n', type=int, default=1, help='B2A generator checkpoint file')
+parser.add_argument('--mode', type=str, default='test', help='use test for just generating sketch')
+parser.add_argument('--patch_n', type=int, default=1, help='divide input in case CUDA out of memory, n^2')
 args = parser.parse_args()
 print(args)
 
