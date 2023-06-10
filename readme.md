@@ -36,7 +36,7 @@ Currently the model is implemented with cycleGAN and a pretrain model can be dow
 
 目前效果由cycleGAN实现，预训练模型可以在[这里](https://drive.google.com/file/d/1NwKzV5UxqBrgXHCXa_r6WzJcV8XbRlNO/view?usp=sharing)下载。
 
-Dataset is not able to be made public due to a copyright conflict, unfortunately, but you can test the model provided or train your own model instead with implemented code, in such case, a few work need to be done on the code.
+Dataset is not able to be made public due to potential copyright issues, unfortunately, but you can test the model provided or train your own model instead with implemented code, in such case, a few work need to be done on the code.
 
 由于版权问题，很抱歉数据集不能公开。但是你仍可以使用我训练好的模型进行测试。或者如果你有自己的数据集，也能用我的代码训练自己的模型，不过你可能需要改一些代码。
 
