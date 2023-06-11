@@ -8,22 +8,16 @@ I would like to emphasize my utmost respect for the diligent efforts of animatio
 
 
 ### Same scene different cut
-同一场景不同cut
-
 <p align="center">
   <img src="https://github.com/ZhenglinPan/AnimeSketcher/blob/master/others/img03.gif" width="" alt="accessibility text">
 </p>
 
 ### Comparision with canny
-与canny的对比
-
 <p align="center">
   <img src="https://github.com/ZhenglinPan/AnimeSketcher/blob/master/others/img01.jpg" width="" alt="accessibility text">
 </p>
 
 ### Different scene, different after-effect
-不同场景，不同摄影设置
-
 <p align="center">
   <img src="https://github.com/ZhenglinPan/AnimeSketcher/blob/master/others/img02.jpg" width="" alt="accessibility text">
 </p>
@@ -34,18 +28,10 @@ This project uses deep learning methods to transform final films of an animation
 
 Currently the model is implemented with cycleGAN and a pretrain model can be downloaded [here](https://drive.google.com/file/d/1NwKzV5UxqBrgXHCXa_r6WzJcV8XbRlNO/view?usp=sharing).
 
-目前效果由cycleGAN实现，预训练模型可以在[这里](https://drive.google.com/file/d/1NwKzV5UxqBrgXHCXa_r6WzJcV8XbRlNO/view?usp=sharing)下载。
-
 Dataset is not able to be made public due to potential copyright issues, unfortunately, but you can test the model provided or train your own model instead with implemented code, in such case, a few work need to be done on the code.
-
-由于版权问题，很抱歉数据集不能公开。但是你仍可以使用我训练好的模型进行测试。或者如果你有自己的数据集，也能用我的代码训练自己的模型，不过你可能需要改一些代码。
 
 Test the model with
 ```python
 python test.py --mode test --patch 4
 ```
-
-This project will be updated from time to time.
-
-不定期更新
 
