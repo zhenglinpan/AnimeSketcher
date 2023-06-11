@@ -28,7 +28,7 @@ This project uses deep learning methods to transform final films of an animation
 
 本项目的目的是使用深度学习的方法把动画的最终画面变换回原画。
 
-Currently the model is implemented with cycleGAN and a pretrain model can be downloaded [here](https://drive.google.com/file/d/1NwKzV5UxqBrgXHCXa_r6WzJcV8XbRlNO/view?usp=sharing).
+Currently the model is implemented with cycleGAN and a pretrained model can be downloaded [here](https://drive.google.com/file/d/1NwKzV5UxqBrgXHCXa_r6WzJcV8XbRlNO/view?usp=sharing).
 
 Dataset is not able to be made public due to potential copyright issues, unfortunately, but you can test the model provided or train your own model instead with implemented code, in such case, a few work need to be done on the code.
 
