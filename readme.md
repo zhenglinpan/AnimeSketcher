@@ -22,7 +22,7 @@ I would like to emphasize my utmost respect for the diligent efforts of animatio
   <img src="https://github.com/ZhenglinPan/AnimeSketcher/blob/master/others/img02.jpg" width="" alt="accessibility text">
 </p>
 
-* images from 進撃の巨人 by WIT Studio *
+*images from 進撃の巨人 by WIT Studio*
 
 This project uses deep learning methods to transform final films of an animation back into sketchs.
 
